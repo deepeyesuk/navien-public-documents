@@ -29,6 +29,12 @@ layout: ../layouts/MarkdownLayout.astro
 5.  **iPhone / iPad 재시동:** 설정을 확인하기 위해 시스템이 재시동을 요청합니다.
 6.  **재시동 후 확인:** iPad가 다시 켜지고 잠금을 해제하면, "Turn on Developer Mode?(개발자 모드를 켜시겠습니까?)"라는 팝업이 나타납니다. **Turn On(켜기)**을 탭하고 기기 암호를 입력합니다.
 
+> 혹시 설정에서 개발자 모드 옵션이 보이지 않는다면 아래를 참조하시가 바랍니다.
+> 윈도우의 경우 확인하여보니, tenorshare의 [icarefone을](https://www.tenorshare.com/products/icarefone.html) 사용하여 언락할 수 있습니다.
+> 무료 다운로드 하시어 실행하시면 아래와 같이 developer mode 툴을 확인하실 수 있는데, 클릭하시고 진행하시면 아래 이메일에서 말씀하신 것과 같이 Privacy & Security에서 개발자 모드를 확인할 수 있습니다
+
+![alt text](image.png)
+
 ## 3단계: Preview 빌드 설치
 
 1.  빌드 링크를 엽니다. 예시:
