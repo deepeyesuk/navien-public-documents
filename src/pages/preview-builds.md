@@ -1,7 +1,7 @@
 ---
 title: "Preview Builds"
 description: "Download preview builds for iOS and Android"
-layout: ../../layouts/MarkdownLayout.astro
+layout: ../layouts/MarkdownLayout.astro
 ---
 
 # 📦 Preview Builds
