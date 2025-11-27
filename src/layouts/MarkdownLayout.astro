@@ -1,0 +1,106 @@
+---
+const { frontmatter } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{frontmatter.title || "Navien Public Documents"}</title>
+    {frontmatter.description && <meta name="description" content={frontmatter.description} />}
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem;
+        line-height: 1.6;
+        background: #f5f7fa;
+        color: #2c3e50;
+      }
+      .container {
+        background: white;
+        padding: 3rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+      h1 {
+        color: #2c3e50;
+        border-bottom: 3px solid #3498db;
+        padding-bottom: 0.5rem;
+        margin-top: 0;
+      }
+      h2 {
+        color: #34495e;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        border-left: 4px solid #3498db;
+        padding-left: 1rem;
+      }
+      h3 {
+        color: #34495e;
+        margin-top: 1.5rem;
+      }
+      ol, ul {
+        margin: 1rem 0;
+        padding-left: 1.5rem;
+      }
+      li {
+        margin: 0.75rem 0;
+      }
+      code {
+        background: #e8f4f8;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-family: 'Monaco', 'Courier New', monospace;
+        font-size: 0.9em;
+        color: #2c3e50;
+      }
+      pre {
+        background: #2c3e50;
+        color: #ecf0f1;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        margin: 1rem 0;
+      }
+      pre code {
+        background: transparent;
+        color: #ecf0f1;
+        padding: 0;
+      }
+      blockquote {
+        background: #d4edda;
+        border-left: 4px solid #28a745;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 0.25rem;
+      }
+      blockquote p {
+        margin: 0;
+      }
+      strong {
+        color: #2c3e50;
+      }
+      a {
+        color: #3498db;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid #e0e0e0;
+        margin: 2rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <slot />
+    </div>
+  </body>
+</html>
