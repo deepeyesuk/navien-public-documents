@@ -1,6 +1,7 @@
 ---
 title: "Expo 개발자 설정 가이드"
-description: "Expo 개발을 위한 iOS 기기 설정 방법 안내"
+description: "Detailed guide for setting up your development environment with Expo."
+icon: "</>"
 layout: ../layouts/MarkdownLayout.astro
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Preview Builds"
-description: "Download preview builds for iOS and Android"
+description: "Access and test the latest preview builds of our applications."
+icon: "📱"
 layout: ../layouts/MarkdownLayout.astro
 ---
 
