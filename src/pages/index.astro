@@ -1,109 +1,104 @@
 ---
-const pageTitle = "Welcome to My Astro Site";
-const currentYear = new Date().getFullYear();
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = "Navien Public Documents";
+
+// Get all pages dynamically
+const pages = await Astro.glob('./*.md');
+const pageLinks = pages.map(page => ({
+  url: page.url,
+  title: page.frontmatter?.title || page.url?.split('/').pop()?.replace('.md', '') || 'Untitled',
+  description: page.frontmatter?.description || '',
+  icon: page.frontmatter?.icon || '📄'
+}));
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-    <style>
-      body {
-        font-family: system-ui, -apple-system, sans-serif;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem;
-        line-height: 1.6;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        min-height: 100vh;
-      }
-      .container {
-        background: white;
-        padding: 3rem;
-        border-radius: 1rem;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-      }
+<BaseLayout title={pageTitle}>
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
       h1 {
-        color: #667eea;
-        margin-top: 0;
+        color: #1a1a1a;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
       }
-      .features {
-        display: grid;
-        gap: 1.5rem;
-        margin: 2rem 0;
-      }
-      .feature {
-        padding: 1.5rem;
-        background: #f8f9fa;
-        border-radius: 0.5rem;
-        border-left: 4px solid #667eea;
-      }
-      .feature h2 {
-        margin-top: 0;
-        color: #333;
-        font-size: 1.25rem;
-      }
-      footer {
-        margin-top: 2rem;
-        padding-top: 2rem;
-        border-top: 1px solid #e0e0e0;
-        text-align: center;
+      .subtitle {
         color: #666;
+        font-size: 1.125rem;
+        margin-bottom: 3rem;
       }
-      a {
-        color: #667eea;
+      .page-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .page-card {
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 1.5rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 1.25rem;
         text-decoration: none;
+        color: inherit;
+        transition: all 0.2s;
       }
-      a:hover {
-        text-decoration: underline;
+      .page-card:hover {
+        border-color: #4a90e2;
+        box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
+        transform: translateY(-2px);
       }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>🚀 {pageTitle}</h1>
-      <p>
-        This is a sample Astro static site, perfect for hosting on GitHub Pages!
-        Astro is a modern web framework that delivers lightning-fast performance
-        with zero JavaScript by default.
-      </p>
+      .page-icon {
+        width: 56px;
+        height: 56px;
+        background: #e8f2fc;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        flex-shrink: 0;
+      }
+      .page-content {
+        flex: 1;
+      }
+      .page-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 0.25rem;
+      }
+      .page-description {
+        color: #666;
+        font-size: 0.95rem;
+      }
+  </style>
 
-      <div class="features">
-        <div class="feature">
-          <h2>⚡ Fast by Default</h2>
-          <p>
-            Astro generates static HTML with zero client-side JavaScript, making
-            your site incredibly fast.
-          </p>
+  <div class="container">
+    <h1>Available Pages</h1>
+    <p class="subtitle">Welcome to the Navien Public Documents site. Explore our comprehensive resources and guides.</p>
+    <div class="page-list">
+      <a href="/navien-public-documents" class="page-card">
+        <div class="page-icon">🏠</div>
+        <div class="page-content">
+          <div class="page-title">Home</div>
+          <div class="page-description">The main landing page for all public documentation.</div>
         </div>
-
-        <div class="feature">
-          <h2>🎨 Easy to Customize</h2>
-          <p>
-            Use your favorite UI framework (React, Vue, Svelte) or stick with
-            plain HTML and CSS. It's your choice!
-          </p>
-        </div>
-
-        <div class="feature">
-          <h2>📦 GitHub Pages Ready</h2>
-          <p>
-            Deploy this site to GitHub Pages with a simple GitHub Actions workflow.
-            Update the <code>astro.config.mjs</code> with your repo details.
-          </p>
-        </div>
-      </div>
-
-      <p>
-        Learn more about Astro at <a href="https://astro.build" target="_blank">astro.build</a>
-      </p>
-
-      <footer>
-        <p>&copy; {currentYear} | Built with Astro 🚀</p>
-      </footer>
+      </a>
+      {pageLinks.map(page => (
+        <a href={page.url} class="page-card">
+          <div class="page-icon">{page.icon}</div>
+          <div class="page-content">
+            <div class="page-title">{page.title}</div>
+            <div class="page-description">{page.description}</div>
+          </div>
+        </a>
+      ))}
     </div>
-  </body>
-</html>
+  </div>
+</BaseLayout>
