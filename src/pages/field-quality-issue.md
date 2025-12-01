@@ -53,7 +53,7 @@ This object contains all the details of the issue report.
     "serialNumber": "1709W2211109003",
     "id": "PLCB0036SD002",
     "fuel": "Kerosene"
-  },    
+  },
   "symptom": {
     "main": {
       "name": "No heat",
@@ -129,13 +129,11 @@ Here's an example showing how `fieldQualityIssue` fits into the complete JSON st
       "name": null
     }
   ],
-  "engineers": [
-    {
-      "companyId": "0003500747",
-      "name": "Gareth Hxxx",
-      "email": "admin@xxxxxservices.com"
-    }
-  ],
+  "engineer": {
+    "companyId": "CT99",
+    "name": "Soojin Lee",
+    "email": "soojinlee@navienuk.com",
+  },
   "estimatedSymptom": "A0100178",
   "estimatedSymptomDetail": "A0100191",
   "installationDate": "2021-09-02",
@@ -192,11 +190,6 @@ Here's an example showing how `fieldQualityIssue` fits into the complete JSON st
       "NOXLow": 999
     }
   },
-  "engineer": {
-    "companyId": "0003500000",
-    "certificate": "C103649",
-    "name": "Daniel Hxxxxxx"
-  },
   "jobNotes": "Fuse blown caused by defective 3way valve\\nPlease raise new job for replacement of 3 way valve",
   "fieldQualityIssue": {
     "title": "test test",
@@ -225,7 +218,7 @@ Here's an example showing how `fieldQualityIssue` fits into the complete JSON st
       "serialNumber": "1709W2211109003",
       "id": "PLCB0036SD002",
       "fuel": "Kerosene"
-    },    
+    },
     "symptom": {
       "main": {
         "name": "No heat",
