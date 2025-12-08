@@ -1,6 +1,6 @@
 ---
-title: "Preview Builds"
-description: "Access and test the latest preview builds of our applications."
+title: "Test (Preview) Builds"
+description: "Access and test the latest test (preview) builds of our applications."
 icon: "📱"
 layout: ../layouts/MarkdownLayout.astro
 ---
@@ -15,7 +15,9 @@ Install the iOS app on your iPhone or iPad.
 
 **Download iOS Builds →**
 
-- [2.6.9](https://expo.dev/accounts/deepeyes/projects/navien-serviceagent/builds/90dfe291-dbfe-410e-9b8f-1fdc702e0ce9)
+- [2.6.9](https://expo.dev/accounts/deepeyes/projects/navien-serviceagent/builds/4e75751f-03af-46b7-b579-326bc53fccd5)
+
+![alt text](ios-test-qr-code.png)
 
 ### Requirements
 - iOS 16 or later
