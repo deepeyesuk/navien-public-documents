@@ -15,9 +15,9 @@ Install the iOS app on your iPhone or iPad.
 
 **Download iOS Builds →**
 
-- [2.6.9](https://expo.dev/accounts/deepeyes/projects/navien-serviceagent/builds/4e75751f-03af-46b7-b579-326bc53fccd5)
+- [2.7.0](https://expo.dev/accounts/deepeyes/projects/navien-serviceagent/builds/04eae412-3872-4e5e-aa89-1773ae095eab)
 
-![alt text](ios-test-qr-code.png)
+![alt text](ios-2.7.0.png)
 
 ### Requirements
 - iOS 16 or later
@@ -32,7 +32,9 @@ Install the Android app on your phone or tablet.
 
 **Download Android Build →**
 
-- [2.6.9](https://expo.dev/accounts/deepeyes/projects/navien-serviceagent/builds/a67cf3d1-ec45-4284-a182-c7999586b6bc)
+- [2.7.0](https://expo.dev/accounts/deepeyes/projects/navien-serviceagent/builds/2b73d832-b7b7-427c-aaa0-70fc3cccbb48)
+
+![alt text](android-2.7.0.png)
 
 ### Requirements
 - Android 8.0 (API 26) or later
